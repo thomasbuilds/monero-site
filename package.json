@@ -40,7 +40,7 @@
     "mdast-util-find-and-replace": "^3.0.2",
     "rehype-external-links": "^3.0.0",
     "sass": "^1.104.0",
-    "sharp": "^0.34.5",
+    "sharp": "^0.35.4",
     "unist-util-visit": "^5.1.0"
   },
   "packageManager": "pnpm@11.4.0",
