@@ -39,8 +39,7 @@
     "mdast-util-find-and-replace": "^3.0.2",
     "rehype-external-links": "^3.0.0",
     "sass": "^1.97.3",
-    "sharp": "^0.34.5",
-    "unist-util-visit": "^5.1.0"
+    "sharp": "^0.34.5"
   },
   "packageManager": "pnpm@11.4.0",
   "devDependencies": {
@@ -48,12 +47,12 @@
     "@eslint/js": "^9.39.3",
     "@types/hast": "^3.0.4",
     "@types/mdast": "^4.0.4",
+    "@types/node": "^22.20.1",
     "eslint": "^9.39.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.6.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "globals": "^17.3.0",
-    "htmlhint": "^1.9.1",
     "lefthook": "^2.1.1",
     "postcss-html": "^1.8.1",
     "prettier": "3.8.1",
