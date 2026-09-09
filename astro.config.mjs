@@ -44,6 +44,7 @@ export default defineConfig({
     concurrency: 4,
   },
   image: {
+    dangerouslyProcessSVG: true,
     responsiveStyles: true,
     layout: "constrained",
     ...(skipImageOptimization && {
