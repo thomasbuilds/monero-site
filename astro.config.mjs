@@ -1,7 +1,7 @@
 // @ts-check
 import sitemap from "@astrojs/sitemap";
 import { filterSitemapByDefaultLocale, i18n } from "astro-i18n-aut/integration";
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 
 import { defaultLocale, locales } from "./src/i18n/config";
 import { moneropediaLinks } from "./src/plugins/remark-moneropedia";
@@ -25,6 +25,19 @@ export default defineConfig({
     : {}),
   site: `https://${SITE_ROOTDOMAIN}`,
   trailingSlash: "always",
+  fonts: [
+    {
+      provider: fontProviders.npm({ remote: false }),
+      name: "DM Sans Variable",
+      cssVariable: "--font-dm-sans",
+      weights: ["100 1000"],
+      styles: ["normal"],
+      options: {
+        package: "@fontsource-variable/dm-sans",
+        file: "index.css",
+      },
+    },
+  ],
   markdown: {
     remarkPlugins: [moneropediaLinks],
     rehypePlugins: [
@@ -44,7 +57,6 @@ export default defineConfig({
     concurrency: 4,
   },
   image: {
-    dangerouslyProcessSVG: true,
     responsiveStyles: true,
     layout: "constrained",
     ...(skipImageOptimization && {
